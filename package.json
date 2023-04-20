@@ -5,6 +5,8 @@
   
     "scripts": {
       "cy:run": "cypress run --headed --browser chrome",
-       "cy:run:firefox":  "cypress run --headed --browser firefox"
+       "cy:run:firefox":  "cypress run --headed --browser firefox",
+       "cypress:browserstack": "browserstack-cypress run --sync"
+
     }
 }

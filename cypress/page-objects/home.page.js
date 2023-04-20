@@ -1,25 +1,32 @@
 /// <reference types="cypress" />
-import { defaultDevices as devices } from "../e2e/__helpers/default-devices";
-const device = devices.device
+// import { defaultDevices as devices } from "../e2e/__helpers/default-devices";
+// const device = devices.device
 class homepage{
     elements = {
-        usernameInput : () => cy.get('input[name="userName"]'),
-        navMenu : () => cy.get('button[class="navbar-toggle collapsed"]'),
-        loginRegisterButtonMobile: ()=> cy.get('select[class="form-control"]').first(),
-        loginRegisterButtonDesktop: () => cy.get('a[href*="account/login"]').first()
-
-        
+       authBtn : () => cy.get('a[class="top menu_account"]').first(), 
+       breadcrumb : () => cy.get('button[class="navbar-toggle collapsed"]'),
+       mainMenu : () => cy.get('select[class="form-control"]').first(),
+       logoutBtn : () => cy.get('a').contains('Logoff')
+           
     }
+
 
     navigateToLoginPageDesktop(){
-        this.elements.loginRegisterButtonMobile().click()
+        cy.wait(500)
+        this.elements.authBtn().click();
     }
 
-    navigateToLoginPageMobile(){
-        this.elements.navMenu().click()
-        this.elements.loginRegisterButtonMobile.select("Login")
-
+    navigateToLogingPageMobile(){
+        this.elements.breadcrumb().click();
+        this.elements.mainMenu().select("Login");
     }
+
+    
+    
+     logout(){
+        this.elements.logoutBtn().click()
+        
+     } 
 
 }
 
