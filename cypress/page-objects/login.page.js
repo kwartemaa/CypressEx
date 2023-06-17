@@ -1,5 +1,4 @@
 import { defaultDevices as devices } from "../e2e/__helpers/default-devices";
-const device = devices.device
 class loginPage{
     elements = {
         loginNameField : () => cy.get('input[id="loginFrm_loginname"]'), 

@@ -1,12 +1,12 @@
 {
   "devDependencies": {
+    "@faker-js/faker": "^8.0.2",
+    "@types/faker": "^6.6.9",
     "cypress": "^12.5.1"
   },
-  
-    "scripts": {
-      "cy:run": "cypress run --headed --browser chrome",
-       "cy:run:firefox":  "cypress run --headed --browser firefox",
-       "cypress:browserstack": "browserstack-cypress run --sync"
-
-    }
+  "scripts": {
+    "cy:run": "cypress run --headed --browser chrome",
+    "cy:run:firefox": "cypress run --headed --browser firefox",
+    "cypress:browserstack": "browserstack-cypress run --sync"
+  }
 }

@@ -19,4 +19,4 @@ export const mobile = {
     isMobile: false,
   }
   
-  export const defaultDevices = [desktop, mobile]
+  export const defaultDevices = [mobile,desktop]
