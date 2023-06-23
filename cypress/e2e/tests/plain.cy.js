@@ -1,5 +1,5 @@
 /// <reference types="cypress" />
-
+//this file is just for trying stuff out before I put them in the scripts when unsure.
 beforeEach(()=>{
     cy.viewport("iphone-8")
 })
