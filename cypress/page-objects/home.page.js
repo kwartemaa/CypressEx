@@ -8,6 +8,8 @@ class homepage{
        mainMenu : () => cy.get('select[class="form-control"]').first(),
        logoutBtn : () => cy.get('a').contains('Logoff'),
        searchField: ()  => cy.get('input[id="filter_keyword"]'),
+       cartIcon: () => cy.get('a[class="productcart"]').first(),
+       firstProduct: () => cy.get('div[class="col-md-3 col-sm-6 col-xs-12"]').first()
 
            
     }
@@ -33,6 +35,15 @@ class homepage{
         this.elements.searchField().clear()
         this.elements.searchField().type(search_term)
         
+    }
+
+    addToCartFromHome(){
+        this.elements.cartIcon().click()
+
+    }
+
+    navigateToPDP(){
+        this.elements.firstProduct().click()
     }
 
     
