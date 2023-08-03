@@ -32,6 +32,7 @@ devices.forEach((device)=>{
             home_page.addToCartFromHome()                 
             cy.wait('@addToCart').its('response.body')
             .should('have.property', 'item_count', 1 )
+            console.log("Hello Annie")
             })
 
         it("should add to cart form PDP", ()=>{
@@ -47,6 +48,7 @@ devices.forEach((device)=>{
             // }).as('addToCartPDP')
             // cy.wait('@addToCartPDP').its('response.body')
             // .should('have.property', 'item_count', 1 )
+            
             })
         
 
